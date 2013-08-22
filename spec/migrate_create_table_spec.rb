@@ -20,6 +20,10 @@ describe "create table with correct schema" do
 
     ActiveRecord::Base.connection.columns(:students).each do |col|
       expected[col.type].include?(col.name).should be_true
+      puts "col.type:"
+      puts col.type
+      puts "col.name:"
+      puts col.name
     end
   end
 end

@@ -7,9 +7,11 @@ class Student < ActiveRecord::Base
             :uniqueness => true,
             format: { with: /.[@]..+[\.]../}
 
-  validates :phone, length: { minimum: 10 }
+  validates :phone, 
+            length: { minimum: 10 }
 
-  validates :age, numericality: { greater_than: 5 }
+  validates :age, 
+            numericality: { greater_than: 5 }
 
   def age
    now = Time.now

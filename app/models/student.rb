@@ -1,6 +1,8 @@
 require_relative '../../db/config'
 
+
 class Student < ActiveRecord::Base
+  has_and_belongs_to_many :teachers
 
   validates :email,
             :presence => true,

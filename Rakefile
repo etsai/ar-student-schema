@@ -46,6 +46,7 @@ task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
 end
 
+
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:specs)
 

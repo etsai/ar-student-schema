@@ -21,7 +21,8 @@ class Student < ActiveRecord::Base
     (now.month == birthday.month && now.day >= birthday.day)) ? 0 : 1)
   end
 
-  def name
+
+  def full_name
     "#{first_name} #{last_name}"
   end 
 
